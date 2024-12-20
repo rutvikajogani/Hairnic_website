@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <style>
+        .eight_section_main {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .eight_section_1 {
+            margin-bottom: 20px;
+        }
+        .eight_section_info {
+            display: none; /* Initially hide all sections */
+        }
+        .eight_section_info.visible {
+            display: block; /* Show the visible section */
+        }
+        .img img {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="eight_section_main">
+        <div class="eight_section_1">
+            <h1><span>Our Customer Said</span> About Our Natural Shampoo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+        </div>
+        <div class="eight_section_2">
+            <div class="eight_section_info visible" id="section1">
+                <div class="img"><img src="img/testimonial-1.jpg" alt=""></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illum consequuntur sint iusto voluptates quis quod tempora, aliquam atque repudiandae nobis, sunt facilis! Iusto non ratione, alias magni facilis repudiandae debitis, magnam autem voluptatum dicta eveniet consequuntur illum odio voluptatibus officiis</p>
+                <h6>Client Name</h6>
+                <small>Profession</small>
+            </div>
+            <div class="eight_section_info" id="section2">
+                <div class="img"><img src="img/testimonial-1.jpg" alt=""></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illum consequuntur sint iusto voluptates quis quod tempora, aliquam atque repudiandae nobis, sunt facilis! Iusto non ratione, alias magni facilis repudiandae debitis, magnam autem voluptatum dicta eveniet consequuntur illum odio voluptatibus officiis</p>
+                <h6>Another Client</h6>
+                <small>Another Profession</small>
+            </div>
+            <div class="eight_section_info" id="section3">
+                <div class="img"><img src="img/testimonial-1.jpg" alt=""></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illum consequuntur sint iusto voluptates quis quod tempora, aliquam atque repudiandae nobis, sunt facilis! Iusto non ratione, alias magni facilis repudiandae debitis, magnam autem voluptatum dicta eveniet consequuntur illum odio voluptatibus officiis</p>
+                <h6>Yet Another Client</h6>
+                <small>Yet Another Profession</small>
+            </div>
+            <div class="buttons">
+                <button onclick="sliderHandelr1()">1</button>
+                <button onclick="sliderHandelr2()">2</button>
+                <button onclick="sliderHandelr3()">3</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function reset() {
+            const sections = document.querySelectorAll('.eight_section_info');
+            sections.forEach(section => section.classList.remove('visible'));
+        }
+
+        function sliderHandelr1() {
+            reset();
+            console.log("sliderHandelr1");
+            document.getElementById('section1').classList.add('visible');
+        }
+
+        function sliderHandelr2() {
+            reset();
+            console.log("sliderHandelr2");
+            document.getElementById('section2').classList.add('visible');
+        }
+
+        function sliderHandelr3() {
+            reset();
+            console.log("sliderHandelr3");
+            document.getElementById('section3').classList.add('visible');
+        }
+
+       
+    </script>
+</body>
+</html>
